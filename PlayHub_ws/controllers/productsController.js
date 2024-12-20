@@ -1,4 +1,4 @@
-const products = require('../models').project_model;
+const products = require('../models').products_model;
 module.exports = {
     list(req, res) {
         return products

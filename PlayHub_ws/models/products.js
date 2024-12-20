@@ -92,11 +92,12 @@ module.exports = sequelize => {
   const options = {
     tableName: "products",
     comment: "",
-    indexes: [],timestamps: false,
+    indexes: [],
+    timestamps: false,
     underscored: true,
     freezeTableName: true,
     schema: 'public'
-    
+
 
 
   };
