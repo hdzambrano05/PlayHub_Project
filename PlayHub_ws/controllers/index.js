@@ -5,5 +5,5 @@ const order_detailsController = require('./order_detailsController');
 module.exports = {
     productsController,
     order_detailsController,
-    ordersController,
+    ordersController
 };
