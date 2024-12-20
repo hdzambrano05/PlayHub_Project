@@ -1,0 +1,26 @@
+{
+  "development": {
+  "username": "postgres",
+  "password": "1004232350",
+  "database": "PlayHub",
+  "host": "localhost",
+  "dialect": "postgres",
+  "port": "5432"
+  },
+  "test": {
+  "username": "postgres ",
+  "password": "1004232350",
+  "database": "PlayHub",
+  "host": "localhost",
+  "dialect": "postgres",
+  "port": "5432"
+  },
+  "production": {
+  "username": "postgres ",
+  "password": "1004232350",
+  "database": "PlayHub",
+  "host": "localhost",
+  "dialect": "postgres",
+  "port": "5432"
+  }
+  }
