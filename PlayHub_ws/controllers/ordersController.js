@@ -1,4 +1,4 @@
-const orders = require('../models').orders.model;
+const orders = require('../models').orders_model;
 module.exports = {
     list(req, res) {
         return orders
