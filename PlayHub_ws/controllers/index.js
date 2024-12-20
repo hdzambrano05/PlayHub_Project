@@ -11,5 +11,5 @@ module.exports = {
     cartsController,
     categoriesController,
     order_detailsController,
-    ordersController,
+    ordersController
 };
