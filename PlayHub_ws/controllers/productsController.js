@@ -42,4 +42,48 @@ module.exports = {
     },
 
 
+    update(req, res) {
+        return products
+            .findByPk(req.params.id)
+            .then(products => {
+                if (!products) {
+                    return res.status(404).send({
+                        message: 'products Not Found',
+                    });
+                }
+                return products
+                    .update({
+                        name: req.body.name || products.name,
+                        description: req.body.description || products.description,
+                        price: req.body.price || products.price,
+                        stock: req.body.stock || products.stock,
+                        image_url: req.body.image_url || products.image_url,
+                        category_id: req.body.category_id || products.category_id
+                    })
+                    .then(() => res.status(200).send(products))
+                    .catch((error) => res.status(400).send(error));
+            })
+            .catch((error) => res.status(400).send(error));
+    },
+
+    delete(req, res) {
+        return products
+            .findByPk(req.params.id)
+            .then(products => {
+                if (!products) {
+                    return res.status(400).send({
+                        message: 'products Not Found',
+                    });
+                }
+                return products
+                    .destroy()
+                    .then(() => res.status(204).send())
+                    .catch((error) => res.status(400).send(error));
+            })
+            .catch((error) => res.status(400).send(error));
+    },
+
+
+
+
 }
